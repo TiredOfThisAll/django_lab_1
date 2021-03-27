@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Rating</title>
+</head>
+<body>
+    <h3>Image rating</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Likes
+                </th>
+                <th>
+                    Dislikes
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% block content %}
+            {% for image_info in images_info %}
+                <tr>
+                    <td>{{ image_info.id }}</td>
+                    <td>{{ image_info.image_likes }}</td>
+                    <td>{{ image_info.image_dislikes }}</td>
+                </tr>
+            {% endfor %}
+            {% endblock content %}
+        </tbody>
+    </table>
+</body>
+</html>

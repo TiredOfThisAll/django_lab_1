@@ -1,0 +1,12 @@
+<form method="POST" action="{% url 'image_rating' image_id %}">
+    {% csrf_token %}
+
+    <img style="width: 1200px; height: 600px" src={{ current_image }}><br>
+    <div>
+        <input type="radio" id="Like" name="choice" value="Like">
+        <label for="Like">Like</label>
+        <input type="radio" id="Dislike" name="choice" value="Dislike">
+        <label for="Dislike">Dislike</label>
+    </div>
+    <input type="submit">
+</form>

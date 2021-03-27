@@ -1,0 +1,9 @@
+{% extends 'admin/change_list.html' %}
+{% block object-tools %}
+    <form method="POST" action=" {% url 'rating_page' %}">
+        {% csrf_token %}
+        <button class="button" name="image_rating">Image Rating</button>
+    <label for="image_rating"></label>
+    </form>
+    {{ block.super }}
+{% endblock object-tools %}
